@@ -42,4 +42,9 @@ This section lists stores which saves time when people are looking for certain i
 1. Job listing
 1. Store listing
 
-## 
+
+
+
+## Licensing
+
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
