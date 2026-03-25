@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Jobs</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+    </style>
+</head>
+<body class="m-5 bg-[#CAE5FF]">
+    <header>
+      <nav
+        class="flex justify-between items-center bg-[#6699CC] p-5 sticky m-5"
+      >
+       <a href="main.html"> <div>
+          <span class="hidden md:block lg:block">Home</span
+          ><span class="material-symbols-outlined md:hidden lg:hidden">
+            home
+          </span>
+        </div>
+        </a>
+        <div>
+        <a href="favorites.html"><div>
+          <span class="material-symbols-outlined md:hidden lg:hidden">
+            favorite
+          </span>
+          <span class="hidden md:block lg:block"
+            >Favorites <a href="Favorites.html"></a
+          ></span>
+        </div>
+        </a>
+        </div>
+
+        <a href="login.html">
+        <div>
+          <button
+            class="bg-[#DCDCDC] text-black px-4 py-2 rounded-full hover:bg-[#5577AA] hover:text-white transition duration-300 font-bold"
+          >
+            login
+          </button>
+        </div>
+        </a>
+      </nav>
+    </header>
+    <main>
+        <div class="flex justify-center items-center h-full">
+            <form action="submit" class="rounded-full">
+            <input type="text" placeholder="Search..." class="p-2" />
+            <button
+                type="submit"
+                class="bg-[#6699CC] text-white p-2 rounded-md hover:bg-[#5577AA] transition duration-300"
+            >
+                Search
+            </button>
+            </form>
+    </main>
+    
+</body>
+</html>
