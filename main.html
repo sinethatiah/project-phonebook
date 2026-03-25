@@ -22,10 +22,11 @@
   <body class="m-5 bg-[#CAE5FF]">
     <header>
       <nav
-        class="flex justify-between items-center bg-[#6699CC] p-5 sticky m-5"
+        class="flex justify-around items-center bg-[#6699CC] p-5 sticky m-5"
       >
+      <div class="w-11 h-11"><img src="images/phone-logo.avif" alt="logo" class="rounded-md"></div>
         <div>
-          <span class="hidden md:block lg:block">Home</span
+          <span class="hidden md:block lg:block font-semibold">Home</span
           ><span class="material-symbols-outlined md:hidden lg:hidden">
             home
           </span>
@@ -34,7 +35,7 @@
           <span class="material-symbols-outlined md:hidden lg:hidden">
             favorite
           </span>
-          <span class="hidden md:block lg:block"
+          <span class="hidden md:block lg:block font-semibold"
             >Favorites <a href="Favorites.html"></a
           ></span>
         </div>
@@ -62,50 +63,49 @@
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10 place-items-center"
       >
-        <div><a href="services.html">
-          <div
-            class="bg-white m-5 p-5 rounded-md hover:bg-[#DCDCDC] transition duration-300 hover:scale-105 hover:shadow-lg hover:cursor-pointer max-w-sm overflow-hidden shadow-lg p-6"
-          >
-            <h2 class="font-bold justify-center text-center">Services</h2>
-            <p class="text-gray-700">
-              Find local service providers like plumbers electricians and more
-            </p>
-          </div></a
-        ></div>
-        <div ><a href="stores.html">
-          <div
-            class="bg-white m-5 p-5 rounded-md hover:bg-[#DCDCDC] transition duration-300 hover:scale-105 hover:shadow-lg hover:cursor-pointer max-w-sm overflow-hidden shadow-lg p-6"
-          >
-            <h2 class="font-bold justify-center text-center">Stores</h2>
-            <p class="text-gray-700">
-              Discover nearby shops, restaurants, and retail locations
-            </p>
-          </div>
-        </a>
+        <div class="bg-white m-5 p-5 rounded-md hover:bg-[#DCDCDC] transition duration-300 hover:scale-105 hover:shadow-lg hover:cursor-pointer max-w-sm overflow-hidden shadow-lg p-6 w-60 h-40">
+          <a href="services.html">
+            <div>
+              <h2 class="font-bold justify-center text-center">Services</h2>
+              <p class="text-gray-700">
+                Find local service providers like plumbers electricians and more
+              </p>
+            </div>
+            </a>
         </div>
-        <div>
-        <a href="emergencies.html">
-          <div
-            class="bg-white m-5 p-5 rounded-md hover:bg-[#DCDCDC] transition duration-300 hover:scale-105 hover:shadow-lg hover:cursor-pointer max-w-sm overflow-hidden shadow-lg p-6"
-          >
-            <h2 class="font-bold justify-center text-center">Emergencies</h2>
-            <p class="text-gray-700">
-              Quick access to local police, fire and medical numbers
-            </p>
-          </div>
-        </a>
+        <div
+          class="bg-white m-5 p-5 rounded-md hover:bg-[#DCDCDC] transition duration-300 hover:scale-105 hover:shadow-lg hover:cursor-pointer max-w-sm overflow-hidden shadow-lg p-6 w-60 h-40"
+        >
+          <a href="stores.html">
+            <div>
+              <h2 class="font-bold justify-center text-center">Stores</h2>
+              <p class="text-gray-700">
+                Discover nearby shops, restaurants, and retail locations
+              </p>
+            </div>
+          </a>
         </div>
-        <div>
-        <a href="jobs.html">
-          <div
-            class="bg-white m-5 p-5 rounded-md hover:bg-[#DCDCDC] transition duration-300 hover:scale-105 hover:shadow-lg hover:cursor-pointer max-w-sm overflow-hidden shadow-lg p-6"
-          >
-            <h2 class="font-bold justify-center text-center">Jobs</h2>
-            <p class="text-gray-700">
-              Browse open positions and hiring contacts in your area
-            </p>
-          </div>
-        </a>
+        <div
+          class="bg-white m-5 p-5 rounded-md hover:bg-[#DCDCDC] transition duration-300 hover:scale-105 hover:shadow-lg hover:cursor-pointer max-w-sm overflow-hidden shadow-lg p-6 w-60 h-40"
+        >
+          <a href="emergencies.html">
+            <div>
+              <h2 class="font-bold justify-center text-center">Emergencies</h2>
+              <p class="text-gray-700">
+                Quick access to local police, fire and medical numbers
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="bg-white m-5 p-5 rounded-md hover:bg-[#DCDCDC] transition duration-300 hover:scale-105 hover:shadow-lg hover:cursor-pointer max-w-sm overflow-hidden shadow-lg p-6 w-60 h-40">
+          <a href="jobs.html">
+            <div>
+              <h2 class="font-bold justify-center text-center">Jobs</h2>
+              <p class="text-gray-700">
+                Browse open positions and hiring contacts in your area
+              </p>
+            </div>
+          </a>
         </div>
       </div>
     </main>
