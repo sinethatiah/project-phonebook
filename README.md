@@ -48,3 +48,9 @@ This section lists stores which saves time when people are looking for certain i
 ## Licensing
 
 This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
+
+## Contribution to project
+
+Anyone who wants to contribute to the project can clone is welcome to give an issue and clone.
+
+git clone https://sinethatiah.github.io/project-phonebook/
