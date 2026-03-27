@@ -53,4 +53,3 @@ This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LI
 
 Anyone who wants to contribute to the project can clone is welcome to give an issue and clone.
 
-git clone https://sinethatiah.github.io/project-phonebook/.git
