@@ -1,42 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup — Phonebook</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'DM Sans', sans-serif; }
+    h1, h2, h3 { font-family: 'Nunito', sans-serif; }
+  </style>
+  <script defer src="singup.js"></script>
 </head>
-<button><a href="main.html" class="bg-[#6699CC] px-5 py-2 text-white rounded-full sticky left-0 top-0 ">Back</a></button>
-<body class="m-5 bg-[#CAE5FF]">
-    <div class="flex items-center justify-center min-h-screen bg-gray-100">
-  <div class="px-8 py-6 mt-4 text-left bg-white shadow-lg rounded-lg">
-    <h3 class="text-2xl font-bold text-center">Create an account</h3>
-    <form action="">
-      <div class="mt-4">
-        <div>
-          <label for="name">Name</label>
-          <input type=" text" placeholder="Name" class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
+<body class="min-h-screen bg-[#CAE5FF] flex flex-col">
+
+ 
+  <div class="p-5">
+    <a href="main.html" class="inline-flex items-center gap-2 text-[#5577AA] font-semibold text-sm hover:gap-3 transition-all">
+      ← Back
+    </a>
+  </div>
+
+  
+  <div class="flex-1 flex items-center justify-center px-4 pb-10">
+    <div class="bg-white/85 backdrop-blur-md border border-white/60 rounded-2xl shadow-xl w-full max-w-md p-8">
+
+      <div class="mb-6 text-center">
+        <h3 class="text-2xl font-extrabold text-[#1a2a3a]">Create an account</h3>
+        <p class="text-sm text-[#7a99bb] mt-1">Join Phonebook — it's free</p>
+      </div>
+
+      <form action="" class="flex flex-col gap-4">
+
+       
+        <div class="flex flex-col gap-1">
+          <label for="name" class="text-xs font-semibold text-[#4a6a8a]">Full Name</label>
+          <input id="name" type="text" placeholder="Jane Doe"
+            class="w-full px-4 py-2.5 border-2 border-[#d0dff0] rounded-xl bg-[#f4f9ff] text-[#1a2a3a] text-sm focus:outline-none focus:border-[#6699CC] focus:bg-white transition">
         </div>
-        <div>
-          <label class="block" for="email">Email</label>
-          <input type="text" placeholder="Email" class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
+
+       
+        <div class="flex flex-col gap-1">
+          <label for="email" class="text-xs font-semibold text-[#4a6a8a]">Email</label>
+          <input id="email" type="email" placeholder="jane@example.com"
+            class="w-full px-4 py-2.5 border-2 border-[#d0dff0] rounded-xl bg-[#f4f9ff] text-[#1a2a3a] text-sm focus:outline-none focus:border-[#6699CC] focus:bg-white transition">
         </div>
+
         
-        <div class="mt-4">
-          <label class="block" for="password">Password</label>
-          <input type="password" placeholder="Password" class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
+        <div class="flex flex-col gap-1">
+          <label for="number" class="text-xs font-semibold text-[#4a6a8a]">Phone Number</label>
+          <input id="number" type="tel" placeholder="+254 7XX XXX XXX"
+            class="w-full px-4 py-2.5 border-2 border-[#d0dff0] rounded-xl bg-[#f4f9ff] text-[#1a2a3a] text-sm focus:outline-none focus:border-[#6699CC] focus:bg-white transition">
         </div>
-        <div class="flex flex-col items-baseline justify-between">
-          <button class="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900 w-full"><a href="main.html">Sign in</a></button>
-          <a href="#" class="text-sm text-blue-600 hover:underline">Forgot password?</a>
-           <div class="mt-2">
-                <p>Already have an account?<a href="login.html" class="text-[#6699CC]">log in</a></p>
+
+        
+        <div class="flex flex-col gap-1">
+          <label for="password" class="text-xs font-semibold text-[#4a6a8a]">Password</label>
+          <input id="password" type="password" placeholder="••••••••"
+            class="w-full px-4 py-2.5 border-2 border-[#d0dff0] rounded-xl bg-[#f4f9ff] text-[#1a2a3a] text-sm focus:outline-none focus:border-[#6699CC] focus:bg-white transition">
+        </div>
+
+        
+        <div class="flex flex-col gap-2">
+          <label class="text-xs font-semibold text-[#4a6a8a]">Business Type</label>
+          <div class="flex gap-3">
+            <button type="button" id="btn-store" onclick="selectType('store')"
+              class="flex-1 flex flex-col items-center gap-1.5 py-3 px-2 rounded-xl border-2 border-[#6699CC] bg-[#dceeff] text-[#2255aa] font-bold text-sm cursor-pointer transition-all">
+              <span class="text-2xl">🏪</span>
+              Store
+            </button>
+            <button type="button" id="btn-service" onclick="selectType('service')"
+              class="flex-1 flex flex-col items-center gap-1.5 py-3 px-2 rounded-xl border-2 border-[#d0dff0] bg-[#f4f9ff] text-[#4a6a8a] font-bold text-sm cursor-pointer transition-all">
+              <span class="text-2xl">🔧</span>
+              Service Provider
+            </button>
           </div>
         </div>
-      </div>
-    </form>
+
+        
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-1">
+            <label for="bizName" class="text-xs font-semibold text-[#4a6a8a]">Business Name</label>
+            <input id="bizName" type="text" placeholder="e.g. Wanjiku's Boutique"
+              class="w-full px-4 py-2.5 border-2 border-[#d0dff0] rounded-xl bg-[#f4f9ff] text-[#1a2a3a] text-sm focus:outline-none focus:border-[#6699CC] focus:bg-white transition">
+          </div>
+          <div class="flex flex-col gap-1">
+            <label for="bizDesc" class="text-xs font-semibold text-[#4a6a8a]">Short Description</label>
+            <input id="bizDesc" type="text" placeholder="What do you offer?"
+              class="w-full px-4 py-2.5 border-2 border-[#d0dff0] rounded-xl bg-[#f4f9ff] text-[#1a2a3a] text-sm focus:outline-none focus:border-[#6699CC] focus:bg-white transition">
+          </div>
+        </div>
+
+        <input type="hidden" id="accountType" value="store">
+
+        
+        <button type="submit"
+          class="w-full py-3 mt-1 bg-[#6699CC] hover:bg-[#5577AA] active:scale-95 text-white font-extrabold text-base rounded-xl transition-all">
+          Create Account
+        </button>
+
+       
+        <p class="text-center text-sm text-[#7a99bb]">
+          Already have an account?
+          <a href="login.html" class="text-[#6699CC] font-semibold hover:underline">Log in</a>
+        </p>
+
+      </form>
+    </div>
   </div>
-</div>
+
+  
+  <footer class="w-full mt-auto">
+    <div class="text-center text-sm font-medium py-3 text-[#4a6a8a]">
+      Contact us at
+      <a href="mailto:info@phonebook.com" class="text-blue-500 hover:underline">info@phonebook.com</a>
+      or call
+      <a href="tel:+254768023626" class="text-blue-500 hover:underline">+254 768 023 626</a>
+    </div>
+    <div class="text-center p-4 bg-[#6699CC] text-white rounded-t-lg">
+      &copy; @2026 Phonebook. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    function selectType(type) {
+      const active = 'flex-1 flex flex-col items-center gap-1.5 py-3 px-2 rounded-xl border-2 border-[#6699CC] bg-[#dceeff] text-[#2255aa] font-bold text-sm cursor-pointer transition-all';
+      const inactive = 'flex-1 flex flex-col items-center gap-1.5 py-3 px-2 rounded-xl border-2 border-[#d0dff0] bg-[#f4f9ff] text-[#4a6a8a] font-bold text-sm cursor-pointer transition-all';
+      document.getElementById('btn-store').className = type === 'store' ? active : inactive;
+      document.getElementById('btn-service').className = type === 'service' ? active : inactive;
+      document.getElementById('accountType').value = type;
+    }
+  </script>
 
 </body>
 </html>
