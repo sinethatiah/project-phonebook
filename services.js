@@ -4,7 +4,7 @@ function getBusinessesByType(type) {
   return all.filter((b) => b.type === type);
 }
  
-// Create a single business card
+// Create a new card from newly added businesses
 function createCard(business) {
   const card = document.createElement("div");
   card.className =

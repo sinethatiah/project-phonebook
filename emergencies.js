@@ -1,7 +1,7 @@
  $(function () {
-        function loadCountries() {
+        function loadCountries(name) {
           $.ajax({
-            url: "https://restcountries.com/v3.1/all?fields=name",
+            url: `https://restcountries.com/v3.1/all?fields=${name}`,
             method: "GET",
             success: function (data) {
               data.sort((a, b) => a.name.common.localeCompare(b.name.common));
@@ -15,7 +15,7 @@
           });
         }
 
-        loadCountries();
+        loadCountries(name);
       });
 
       $("#dropdownBtn").on("click", function () {
