@@ -21,38 +21,33 @@
 
 </head>
 <body class="bg-[#CAE5FF] min-h-screen flex flex-col">
-     <nav
-        class="flex justify-around items-center bg-[#6699CC] p-5 sticky m-5"
-      >
-      <div class="w-11 h-11"><img src="images/phone-logo.avif" alt="logo" class="rounded-md"></div>
-       <a href="main.html"> <div>
-          <span class="hidden md:block lg:block font-semibold">Home</span
-          ><span class="material-symbols-outlined md:hidden lg:hidden">
-            home
-          </span>
-        </div>
+    <nav class="flex justify-around items-center bg-[#6699CC] px-8 py-3 mx-4 mt-4 rounded-2xl shadow-lg sticky top-4 z-50">
+ 
+        
+        <a href="index.html" class="flex items-center gap-2">
+          <img src="images/phone-logo.avif" alt="logo" class="w-10 h-10 rounded-xl object-cover" />
         </a>
+ 
+        
         <div>
-        <a href="favorites.html"><div>
-          <span class="material-symbols-outlined md:hidden lg:hidden">
-            favorite
-          </span>
-          <span class="hidden md:block lg:block font-semibold"
-            >Favorites <a href="Favorites.html"></a
-          ></span>
+          <a href="main.html" class="text-white font-bold text-sm tracking-wide hover:text-white/70 transition">
+            Home
+          </a>
+          </div>
+          <div>
+          <a href="favorites.html" class="text-white font-bold text-sm tracking-wide hover:text-white/70 transition">
+            Favorites
+          </a>
         </div>
-        </a>
-        </div>
-
+ 
+        
         <a href="login.html">
-        <div>
-          <button
-            class="bg-[#DCDCDC] text-black px-4 py-2 rounded-full hover:bg-[#5577AA] hover:text-white transition duration-300 font-bold"
-          >
-            login
+          <button class="flex items-center gap-2 bg-white text-[#5577AA] px-5 py-2.5 rounded-full font-extrabold text-sm hover:bg-[#dceeff] hover:shadow-md transition-all">
+            <span class="material-symbols-outlined text-lg">storefront</span>
+            Business Login
           </button>
-        </div>
         </a>
+ 
       </nav>
     </header>
     <main>

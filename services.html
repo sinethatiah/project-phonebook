@@ -22,28 +22,33 @@
   </head>
   <body class="bg-[#CAE5FF] min-h-screen flex flex-col">
     <header>
-      <nav class="flex justify-between items-center bg-[#6699CC] px-6 py-4 mx-4 mt-4 rounded-2xl shadow-md sticky top-4 z-50">
-        <div class="w-10 h-10">
-          <a href="index.html">
-            <img src="images/phone-logo.avif" alt="logo" class="rounded-xl w-full h-full object-cover" />
+     <nav class="flex justify-around items-center bg-[#6699CC] px-8 py-3 mx-4 mt-4 rounded-2xl shadow-lg sticky top-4 z-50">
+ 
+        
+        <a href="index.html" class="flex items-center gap-2">
+          <img src="images/phone-logo.avif" alt="logo" class="w-10 h-10 rounded-xl object-cover" />
+        </a>
+ 
+        
+        <div>
+          <a href="main.html" class="text-white font-bold text-sm tracking-wide hover:text-white/70 transition">
+            Home
+          </a>
+          </div>
+          <div>
+          <a href="favorites.html" class="text-white font-bold text-sm tracking-wide hover:text-white/70 transition">
+            Favorites
           </a>
         </div>
  
-        <div class="flex items-center gap-6">
-          <a href="main.html" class="text-white/80 hover:text-white font-semibold text-sm transition">
-            <span class="hidden md:block">Home</span>
-            <span class="material-symbols-outlined md:hidden text-xl">home</span>
-          </a>
-          <a href="favorites.html" class="text-white/80 hover:text-white font-semibold text-sm transition">
-            <span class="hidden md:block">Favorites</span>
-            <span class="material-symbols-outlined md:hidden text-xl">favorite</span>
-          </a>
-          <a href="login.html">
-            <button class="bg-white text-[#5577AA] px-5 py-2 rounded-full font-bold text-sm hover:bg-[#dceeff] transition">
-              Login
-            </button>
-          </a>
-        </div>
+        
+        <a href="login.html">
+          <button class="flex items-center gap-2 bg-white text-[#5577AA] px-5 py-2.5 rounded-full font-extrabold text-sm hover:bg-[#dceeff] hover:shadow-md transition-all">
+            <span class="material-symbols-outlined text-lg">storefront</span>
+            Business Login
+          </button>
+        </a>
+ 
       </nav>
     </header>
     <main class="flex-1 p-5">

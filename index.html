@@ -5,139 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ThePhonebook</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <style>
+      body { font-family: 'DM Sans', sans-serif; }
+      h1, h2, h3, h4, h5 { font-family: 'Nunito', sans-serif; }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
   </head>
-  <body class="m-5">
-    <nav
-      class="flex justify-around items-center bg-[#6699CC] p-5 sticky top-0 mt-5 mb-5"
-    >
-      <div class="w-11 h-11">
-        <img src="images/phone-logo.avif" alt="logo" class="rounded-md" />
-      </div>
-      <a href="main.html" class="font-semibold">Home</a>
-      <a href="login.html" class="font-semibold"
-        ><div>
-          <button
-            class="bg-[#DCDCDC] text-black px-4 py-2 rounded-full hover:bg-[#5577AA] hover:text-white transition duration-300 font-bold"
-          >
-            login
-          </button>
-        </div></a
-      >
-    </nav>
-    <main>
-      <div
-        class="h-full md:h-screen lg:h-screen bg-[url('images/background.jpg')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center rounded-lg"
-      >
-        <h1 class="text-5xl font-bold text-center mt-10">
-          Welcome to the phonebook
-        </h1>
-        <p class="text-center mt-20 text-lg w-1/2 px-4">
-          Your one-stop solution for managing contacts, services, stores, and
-          jobs. Find all your favourite businesses,a dn discover new ones along
-          the way!!
-        </p>
-        <button class="mt-10 mb-5">
-          <a
-            href="main.html"
-            class="bg-[#6699CC] text-white px-4 py-2 rounded-md hover:bg-[#5577AA] transition duration-300"
-            >Get Started</a
-          >
-        </button>
-      </div>
-      <div class="p-10">
-        <div class="justify-center text-center">
-          <h2 class="font-bold text-2xl mb-10">Our services</h2>
+  <body class="bg-[#CAE5FF] min-h-screen flex flex-col">
+
+    <!-- Nav -->
+    <header>
+      <nav class="flex justify-between items-center bg-[#6699CC] px-6 py-4 mx-4 mt-4 rounded-2xl shadow-md sticky top-4 z-50">
+        <div class="w-10 h-10">
+          <img src="images/phone-logo.avif" alt="logo" class="rounded-xl w-full h-full object-cover" />
         </div>
-        <div
-          class="flex flex-col md:flex-row lg:flex-row justify-center items-center h-full gap-10 mt-10"
-        >
-          <div
-            class="max-w-sm rounded-lg border border-gray-200 bg-[#CAE5FF] p-6 shadow-md dark:border-gray-700 dark:bg-gray-800 w-64 h-64 hover:scale-105 transition duration-300 hover:shadow-lg hover:cursor-pointer "
-          >
-            <h5
-              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white justify-center items-center flex"
-            >
-              Business listings
-            </h5>
-            <p class="font-normal text-gray-700 dark:text-gray-dark">
-              Register with us to get your business listed in our directory and
-              reach a wider audience.
+        <div class="flex items-center gap-6">
+          <a href="main.html" class="text-white/80 hover:text-white font-semibold text-sm transition hidden md:block">Home</a>
+         <a href="login.html">
+  <button class="bg-white text-[#5577AA] px-5 py-2 rounded-full font-bold text-sm hover:bg-[#dceeff] transition flex items-center gap-2">
+    <span class="material-symbols-outlined text-base">storefront</span>
+    Business Login
+  </button>
+</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-1">
+
+      <!-- Hero -->
+      <section class="relative bg-[url('images/background.jpg')] bg-cover bg-center bg-no-repeat mx-4 mt-6 rounded-3xl overflow-hidden min-h-[75vh] flex flex-col items-center justify-center text-center px-6">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-[#1a2a3a]/50 rounded-3xl"></div>
+
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <span class="inline-block bg-white/20 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-5 tracking-widest uppercase backdrop-blur-sm">
+            Kenya's Local Directory
+          </span>
+          <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-5">
+            Welcome to<br/><span class="text-[#CAE5FF]">The Phonebook</span>
+          </h1>
+          <p class="text-white/80 text-base md:text-lg mb-8 max-w-lg mx-auto">
+            Your one-stop solution for contacts, services, stores, and jobs. Find your favourite businesses and discover new ones.
+          </p>
+          <a href="main.html"
+            class="inline-block bg-[#6699CC] hover:bg-[#5577AA] text-white font-extrabold px-8 py-3 rounded-full transition text-sm shadow-lg">
+            Get Started →
+          </a>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="px-4 sm:px-8 py-14">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-black text-[#1a2a3a]">Our Services</h2>
+          <p class="text-[#4a6a8a] mt-2 text-sm">Everything you need, all in one place</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#d0dff0] hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer">
+            <div class="w-12 h-12 bg-[#dceeff] rounded-xl flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-[#5577AA]">store</span>
+            </div>
+            <h5 class="text-lg font-extrabold text-[#1a2a3a] mb-2">Business Listings</h5>
+            <p class="text-sm text-[#7a99bb] leading-relaxed">
+              Register to get your business listed in our directory and reach a wider local audience.
             </p>
           </div>
-          <div
-            class="max-w-sm rounded-lg border border-gray-200 bg-[#CAE5FF] p-6 shadow-md dark:border-gray-700 dark:bg-gray-800 w-64 h-64 hover:scale-105 transition duration-300 hover:shadow-lg hover:cursor-pointer"
-          >
-            <h5
-              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white justify-center items-center flex"
-            >
-              Advertising
-            </h5>
-            <p class="font-normal text-gray-700 dark:text-gray-dark">
-              Advertise your business on our platform and reach a wider
-              audience. We offer various advertising options to suit your needs
-              and budget.
+
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#d0dff0] hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer">
+            <div class="w-12 h-12 bg-[#dceeff] rounded-xl flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-[#5577AA]">campaign</span>
+            </div>
+            <h5 class="text-lg font-extrabold text-[#1a2a3a] mb-2">Advertising</h5>
+            <p class="text-sm text-[#7a99bb] leading-relaxed">
+              Advertise your business and reach a wider audience with options that suit any budget.
             </p>
           </div>
-          <div
-            class="max-w-sm rounded-lg border border-gray-200 bg-[#CAE5FF] p-6 shadow-md dark:border-gray-700 dark:bg-gray-800 w-64 h-64 hover:scale-105 transition duration-300 hover:shadow-lg hover:cursor-pointer"
-          >
-            <h5
-              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white justify-center items-center flex"
-            >
-              Job listings
-            </h5>
-            <p class="font-normal text-gray-700 dark:text-gray-dark">
-              Post job openings and find qualified candidates for your business.
-              We offer a user-friendly platform to connect employers with job
-              seekers.
+
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#d0dff0] hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer">
+            <div class="w-12 h-12 bg-[#dceeff] rounded-xl flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-[#5577AA]">business_center</span>
+            </div>
+            <h5 class="text-lg font-extrabold text-[#1a2a3a] mb-2">Job Listings</h5>
+            <p class="text-sm text-[#7a99bb] leading-relaxed">
+              Post openings and find qualified candidates. Connect employers with job seekers easily.
             </p>
           </div>
+
         </div>
-        <div class="mt-10 justify-center text-center">
-          <button>
-            <a
-              href="main.html"
-              class="bg-[#6699CC] text-white px-4 py-2 rounded-md hover:bg-[#5577AA] transition duration-300"
-              >View All Services</a
-            >
-          </button>
+
+        <div class="text-center mt-8">
+          <a href="main.html"
+            class="inline-block bg-[#6699CC] hover:bg-[#5577AA] text-white font-bold px-8 py-3 rounded-full transition text-sm">
+            View All Services
+          </a>
         </div>
-      </div>
-      <div>
-        <div class="justify-center text-center">
-          <h2 class="font-bold text-2xl mb-10">Why Choose Us?</h2>
-          <div
-            class="grid grid-cols-2 md:grid-cols-3 gap-10 mt-10 bg-white p-10 rounded-lg shadow-md"
-          >
-            <div>
-              <h2 class="font-semibold">Close to Home</h2>
-              <p>
-                We bring you closer to your favourite businesses and services.
-              </p>
+      </section>
+
+      <!-- Why Choose Us -->
+      <section class="px-4 sm:px-8 pb-14">
+        <div class="bg-white rounded-3xl shadow-sm border border-[#d0dff0] p-8 md:p-12">
+          <div class="text-center mb-10">
+            <h2 class="text-3xl font-black text-[#1a2a3a]">Why Choose Us?</h2>
+            <p class="text-[#4a6a8a] mt-2 text-sm">Built for the community, by the community</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="flex flex-col items-center text-center gap-3">
+              <div class="w-14 h-14 bg-[#dceeff] rounded-2xl flex items-center justify-center">
+                <span class="material-symbols-outlined text-[#5577AA] text-2xl">location_on</span>
+              </div>
+              <h3 class="font-extrabold text-[#1a2a3a]">Close to Home</h3>
+              <p class="text-sm text-[#7a99bb] leading-relaxed">We bring you closer to your favourite businesses and services in your area.</p>
             </div>
-            <div>
-              <h2 class="font-semibold">Easy to Use</h2>
-              <p>
-                Our platform is designed to be user-friendly and accessible.
-              </p>
+
+            <div class="flex flex-col items-center text-center gap-3">
+              <div class="w-14 h-14 bg-[#dceeff] rounded-2xl flex items-center justify-center">
+                <span class="material-symbols-outlined text-[#5577AA] text-2xl">touch_app</span>
+              </div>
+              <h3 class="font-extrabold text-[#1a2a3a]">Easy to Use</h3>
+              <p class="text-sm text-[#7a99bb] leading-relaxed">Designed to be simple, fast, and accessible for everyone.</p>
             </div>
-            <div>
-              <h2 class="font-semibold">Trusted</h2>
-              <p>
-                We have built a reputation for reliability and trustworthiness.
-              </p>
+
+            <div class="flex flex-col items-center text-center gap-3">
+              <div class="w-14 h-14 bg-[#dceeff] rounded-2xl flex items-center justify-center">
+                <span class="material-symbols-outlined text-[#5577AA] text-2xl">verified</span>
+              </div>
+              <h3 class="font-extrabold text-[#1a2a3a]">Trusted</h3>
+              <p class="text-sm text-[#7a99bb] leading-relaxed">Built on a reputation for reliability and trustworthiness in the community.</p>
             </div>
+
           </div>
         </div>
-      </div>
+      </section>
+
     </main>
-    <footer class="bottom-0 w-full">
-      <div class="justify-center text-center font-medium mt-7">
-            <p>contacts us at <a href="mailto:info@phonebook.com" class="text-blue-500 hover:underline">info@phonebook.com</a> or call us at <a href="tel:+254768023626" class="text-blue-500 hover:underline">+254 768 023 626</a></p>
-        </div>
-      <div class="text-center p-4 bg-[#6699CC] text-white mt-10 rounded-lg">
+
+    <!-- Footer -->
+    <footer class="mt-auto w-full">
+      <div class="text-center text-sm font-medium py-3 text-[#4a6a8a]">
+        Contact us at
+        <a href="mailto:info@phonebook.com" class="text-blue-500 hover:underline">info@phonebook.com</a>
+        or call
+        <a href="tel:+254768023626" class="text-blue-500 hover:underline">+254 768 023 626</a>
+      </div>
+      <div class="text-center p-4 bg-[#6699CC] text-white rounded-t-lg">
         &copy; @2026 Phonebook. All rights reserved.
       </div>
     </footer>
+
   </body>
 </html>
