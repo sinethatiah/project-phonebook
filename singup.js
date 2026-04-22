@@ -26,5 +26,5 @@ document.querySelector('form').addEventListener('submit', function (e) {
     document.getElementById(`bizName`).value
   );
   biz.save();
-  window.location.href = 'main.html';
+  window.location.href = 'account.html';
 });

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Account — Phonebook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <style>
+      body { font-family: 'DM Sans', sans-serif; }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+  <body class="bg-[#CAE5FF] min-h-screen flex flex-col">
+
+    <header>
+      <nav class="flex justify-around items-center bg-[#6699CC] px-8 py-3 mx-4 mt-4 rounded-2xl shadow-lg sticky top-4 z-50">
+
+        
+        <a href="index.html">
+          <img src="images/phone-logo.avif" alt="logo" class="w-10 h-10 rounded-xl object-cover" />
+        </a>
+
+       
+        
+         <div> <a href="main.html" class="text-white font-bold text-sm tracking-wide hover:text-white/70 transition">
+            Home
+          </a>
+          </div>
+          <div>
+          <a href="listing.html" class="text-white font-bold text-sm tracking-wide hover:text-white/70 transition">
+            My Listing
+          </a>
+        </div>
+
+        
+        <div class="relative" id="accountDropdown">
+          <button onclick="toggleDropdown()" class="flex items-center gap-2 bg-white text-[#5577AA] px-5 py-2.5 rounded-full font-extrabold text-sm hover:bg-[#dceeff] hover:shadow-md transition-all">
+            <span class="material-symbols-outlined text-lg">account_circle</span>
+            My Account
+            <span class="material-symbols-outlined text-base">expand_more</span>
+          </button>
+
+          
+          <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-2xl shadow-lg border border-[#d0dff0] overflow-hidden z-50">
+            <a href="#profile" class="flex items-center gap-2 px-4 py-3 text-sm text-[#4a6a8a] font-semibold hover:bg-[#f4f9ff] transition">
+              <span class="material-symbols-outlined text-base">manage_accounts</span>
+              Edit Profile
+            </a>
+            <a href="#listing" class="flex items-center gap-2 px-4 py-3 text-sm text-[#4a6a8a] font-semibold hover:bg-[#f4f9ff] transition">
+              <span class="material-symbols-outlined text-base">storefront</span>
+              My Listing
+            </a>
+            <hr class="border-[#d0dff0]" />
+            <button class="w-full flex items-center gap-2 px-4 py-3 text-sm text-red-400 font-semibold hover:bg-red-50 transition">
+              <span class="material-symbols-outlined text-base">logout</span>
+              Logout
+            </button>
+          </div>
+        </div>
+
+      </nav>
+    </header>
+
+    <main class="flex-1">
+     
+    </main>
+
+    <footer class="mt-auto w-full">
+      <div class="text-center text-sm font-medium py-3 text-[#4a6a8a]">
+        Contact us at
+        <a href="mailto:info@phonebook.com" class="text-blue-500 hover:underline">info@phonebook.com</a>
+        or call
+        <a href="tel:+254768023626" class="text-blue-500 hover:underline">+254 768 023 626</a>
+      </div>
+      <div class="text-center p-4 bg-[#6699CC] text-white rounded-t-lg">
+        &copy; @2026 Phonebook. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      function toggleDropdown() {
+        document.getElementById('dropdownMenu').classList.toggle('hidden');
+      }
+
+      document.addEventListener('click', function(e) {
+        if (!document.getElementById('accountDropdown').contains(e.target)) {
+          document.getElementById('dropdownMenu').classList.add('hidden');
+        }
+      });
+    </script>
+
+  </body>
+</html>
