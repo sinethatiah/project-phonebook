@@ -1,10 +1,11 @@
 class Business {
-  constructor(name, email, number, type, password) {
+  constructor(name, email, number, type, password , businessName) {
     this.name = name;
     this.email = email;
     this.number = number;
     this.type = type;
     this.password = password;
+    this.businessName = businessName;
   }
 
   save() {
@@ -21,7 +22,8 @@ document.querySelector('form').addEventListener('submit', function (e) {
     document.getElementById('email').value,
     document.getElementById('number').value,
     document.getElementById('accountType').value,
-    document.getElementById('password').value
+    document.getElementById('password').value,
+    document.getElementById(`bizName`).value
   );
   biz.save();
   window.location.href = 'main.html';
