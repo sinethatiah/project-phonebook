@@ -1,3 +1,4 @@
+// Add new object upon submission
 class Business {
   constructor(name, email, number, type, password , businessName) {
     this.name = name;

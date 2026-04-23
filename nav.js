@@ -1,5 +1,6 @@
 const loggedIn = JSON.parse(localStorage.getItem('loggedInBusiness'));
 
+// display the profile page if user is logged in
 if (loggedIn) {
   document.getElementById('auth-btn').innerHTML = `
     <div class="relative" id="accountDropdown">
@@ -22,16 +23,17 @@ if (loggedIn) {
     </div>
   `;
 }
-
+// log out from profile
 function logout() {
   localStorage.removeItem('loggedInBusiness');
   window.location.href = 'index.html';
 }
 
+//hide dropdown menu
 function toggleDropdown() {
   document.getElementById('dropdownMenu').classList.toggle('hidden');
 }
-
+//display dropdown menu on click
 document.addEventListener('click', function(e) {
   const dropdown = document.getElementById('accountDropdown');
   if (dropdown && !dropdown.contains(e.target)) {

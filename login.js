@@ -1,3 +1,4 @@
+// log in iff user is found in local storage
 document.querySelector('form').addEventListener('submit', function(e) {
   e.preventDefault();
 
