@@ -19,39 +19,97 @@
 
     <header>
       <nav class="flex justify-around items-center bg-[#6699CC] px-8 py-3 mx-4 mt-4 rounded-2xl shadow-lg sticky top-4 z-50">
- 
-        
         <a href="index.html" class="flex items-center gap-2">
           <img src="images/phone-logo.avif" alt="logo" class="w-10 h-10 rounded-xl object-cover" />
         </a>
- 
-        
         <div>
-          <a href="main.html" class="text-white font-bold text-sm tracking-wide hover:text-white/70 transition">
-            Home
-          </a>
-          </div>
-          <div>
-          <a href="favorites.html" class="text-white font-bold text-sm tracking-wide hover:text-white/70 transition">
-            Favorites
+          <a href="main.html" class="text-white font-bold text-sm tracking-wide hover:text-white/70 transition">Home</a>
+        </div>
+        <div>
+          <a href="favorites.html" class="text-white font-bold text-sm tracking-wide hover:text-white/70 transition">Favorites</a>
+        </div>
+        <div id="auth-btn">
+          <a href="login.html">
+            <button class="flex items-center gap-2 bg-white text-[#5577AA] px-5 py-2.5 rounded-full font-extrabold text-sm hover:bg-[#dceeff] transition-all">
+              <span class="material-symbols-outlined text-lg">storefront</span>
+              Business Login
+            </button>
           </a>
         </div>
- 
-        
-       <div id="auth-btn">
-  <a href="login.html">
-    <button class="flex items-center gap-2 bg-white text-[#5577AA] px-5 py-2.5 rounded-full font-extrabold text-sm hover:bg-[#dceeff] transition-all">
-      <span class="material-symbols-outlined text-lg">storefront</span>
-      Business Login
-    </button>
-  </a>
-</div>
- 
       </nav>
     </header>
 
-    <main class="flex-1">
-     
+    <main class="flex-1 p-4 max-w-2xl mx-auto w-full">
+
+      <!-- not logged in state -->
+      <div id="not-logged-in" class="hidden text-center mt-20">
+        <span class="material-symbols-outlined text-6xl text-[#7a99bb]">lock</span>
+        <p class="text-[#4a6a8a] font-semibold mt-4 mb-6">You need to be logged in to view this page.</p>
+        <a href="login.html" class="bg-[#6699CC] hover:bg-[#5577AA] text-white font-bold px-6 py-3 rounded-xl transition-all">
+          Go to Login
+        </a>
+      </div>
+
+      <!-- logged in state -->
+      <div id="account-content" class="hidden flex flex-col gap-5 mt-6">
+
+        <!-- header card -->
+        <div class="bg-white rounded-2xl shadow-md p-6 border border-[#d0dff0] flex items-center gap-5">
+          <div class="bg-[#6699CC] rounded-full w-16 h-16 flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-white text-4xl">account_circle</span>
+          </div>
+          <div>
+            <h1 id="display-bizName" class="text-xl font-extrabold text-[#1a2a3a]"></h1>
+            <p id="display-type" class="text-sm text-[#7a99bb] font-semibold uppercase tracking-wide mt-0.5"></p>
+          </div>
+        </div>
+
+        <!-- details card -->
+        <div class="bg-white rounded-2xl shadow-md p-6 border border-[#d0dff0] flex flex-col gap-4">
+          <h2 class="text-base font-extrabold text-[#1a2a3a]">Account Details</h2>
+
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-[#6699CC]">person</span>
+            <div>
+              <p class="text-xs text-[#7a99bb] font-semibold uppercase tracking-wide">Owner Name</p>
+              <p id="display-name" class="text-sm font-semibold text-[#1a2a3a]"></p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-[#6699CC]">mail</span>
+            <div>
+              <p class="text-xs text-[#7a99bb] font-semibold uppercase tracking-wide">Email</p>
+              <p id="display-email" class="text-sm font-semibold text-[#1a2a3a]"></p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-[#6699CC]">call</span>
+            <div>
+              <p class="text-xs text-[#7a99bb] font-semibold uppercase tracking-wide">Phone Number</p>
+              <p id="display-number" class="text-sm font-semibold text-[#1a2a3a]"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- listing status card -->
+        <div class="bg-white rounded-2xl shadow-md p-6 border border-[#d0dff0] flex flex-col gap-3">
+          <h2 class="text-base font-extrabold text-[#1a2a3a]">Your Listing</h2>
+          <p class="text-sm text-[#4a6a8a]">Your business is currently listed in the directory under:</p>
+          <a id="listing-link" href="#" class="flex items-center gap-2 bg-[#CAE5FF] text-[#5577AA] font-bold text-sm px-4 py-3 rounded-xl hover:bg-[#b0d4f0] transition-all w-fit">
+            <span class="material-symbols-outlined text-base">open_in_new</span>
+            <span id="listing-label"></span>
+          </a>
+        </div>
+
+        <!-- logout button -->
+        <button onclick="logout()" class="flex items-center justify-center gap-2 bg-white border border-red-200 text-red-400 hover:bg-red-50 font-bold text-sm px-6 py-3 rounded-xl transition-all">
+          <span class="material-symbols-outlined text-base">logout</span>
+          Logout
+        </button>
+
+      </div>
     </main>
 
     <footer class="mt-auto w-full">
@@ -67,15 +125,34 @@
     </footer>
 
     <script>
-      function toggleDropdown() {
-        document.getElementById('dropdownMenu').classList.toggle('hidden');
+      const loggedIn = JSON.parse(localStorage.getItem('loggedInBusiness'));
+
+      if (!loggedIn) {
+        document.getElementById('not-logged-in').classList.remove('hidden');
+      } else {
+        document.getElementById('account-content').classList.remove('hidden');
+
+        document.getElementById('display-bizName').textContent = loggedIn.businessName;
+        document.getElementById('display-name').textContent = loggedIn.name;
+        document.getElementById('display-email').textContent = loggedIn.email;
+        document.getElementById('display-number').textContent = loggedIn.number;
+        document.getElementById('display-type').textContent = loggedIn.type === 'store' ? '🏪 Store' : '🔧 Service Provider';
+
+        const listingLink = document.getElementById('listing-link');
+        const listingLabel = document.getElementById('listing-label');
+        if (loggedIn.type === 'store') {
+          listingLink.href = 'stores.html';
+          listingLabel.textContent = 'Stores';
+        } else {
+          listingLink.href = 'services.html';
+          listingLabel.textContent = 'Services';
+        }
       }
 
-      document.addEventListener('click', function(e) {
-        if (!document.getElementById('accountDropdown').contains(e.target)) {
-          document.getElementById('dropdownMenu').classList.add('hidden');
-        }
-      });
+      function logout() {
+        localStorage.removeItem('loggedInBusiness');
+        window.location.href = 'index.html';
+      }
     </script>
 
   </body>
