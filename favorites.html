@@ -19,7 +19,7 @@
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="nav.js"></script>
-
+<script defer src="favorites.js"></script>
 </head>
 <body class="bg-[#CAE5FF] min-h-screen flex flex-col">
     <nav class="flex justify-around items-center bg-[#6699CC] px-8 py-3 mx-4 mt-4 rounded-2xl shadow-lg sticky top-4 z-50">
@@ -65,11 +65,7 @@
               Search
             </button>
           </div>
-             <div  id="favorites" class="max-w-md mx-auto p-4 min-h-screem">
-          
- 
-             
-           
+             <div id="favourites-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4"></div>
         </div>
     </main>
      <footer class="mt-auto w-full">

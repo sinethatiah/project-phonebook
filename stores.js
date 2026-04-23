@@ -16,10 +16,14 @@ function createCard(business) {
         <h2 class="text-lg font-extrabold text-[#1a2a3a]">${business.businessName}</h2>
         <p class="text-xs text-[#7a99bb] font-semibold uppercase tracking-wide">Store</p>
       </div>
+      <button onclick="toggleFavourite(${business.id}, this)" 
+        class="text-[#7a99bb] hover:text-red-400 transition">
+        <span class="material-symbols-outlined">favorite</span>
+      </button>
     </div>
- 
+
     <p class="text-sm text-[#4a6a8a]">${business.description || "No description provided."}</p>
- 
+
     <div class="flex items-center justify-between mt-auto pt-3 border-t border-[#e8f0f8]">
       <span class="text-sm text-[#4a6a8a] font-medium">${business.number}</span>
       <a href="tel:${business.number}"
@@ -49,3 +53,22 @@ function displayStores() {
 }
  
 displayStores();
+
+function toggleFavourite(id, btn) {
+  const all = JSON.parse(localStorage.getItem('businesses')) || [];
+  const business = all.find(b => b.id === id);
+  let favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+  const already = favourites.find(f => f.id === id);
+
+  if (already) {
+    favourites = favourites.filter(f => f.id !== id);
+    btn.classList.remove('text-red-400');
+    btn.classList.add('text-[#7a99bb]');
+  } else {
+    favourites.push(business);
+    btn.classList.remove('text-[#7a99bb]');
+    btn.classList.add('text-red-400');
+  }
+
+  localStorage.setItem('favourites', JSON.stringify(favourites));
+}
