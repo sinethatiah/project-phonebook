@@ -19,6 +19,7 @@
           "opsz" 24;
       }
     </style>
+    <script defer src="nav.js"></script>
 </head>
 <body class="bg-[#CAE5FF] min-h-screen flex flex-col">
     <header>
@@ -42,102 +43,31 @@
         </div>
  
         
-        <a href="login.html">
-          <button class="flex items-center gap-2 bg-white text-[#5577AA] px-5 py-2.5 rounded-full font-extrabold text-sm hover:bg-[#dceeff] hover:shadow-md transition-all">
-            <span class="material-symbols-outlined text-lg">storefront</span>
-            Business Login
-          </button>
-        </a>
+       <div id="auth-btn">
+  <a href="login.html">
+    <button class="flex items-center gap-2 bg-white text-[#5577AA] px-5 py-2.5 rounded-full font-extrabold text-sm hover:bg-[#dceeff] transition-all">
+      <span class="material-symbols-outlined text-lg">storefront</span>
+      Business Login
+    </button>
+  </a>
+</div>
  
       </nav>
     </header>
-    <main>
-        <div class="flex justify-center items-center h-full">
-            <form action="submit" class="rounded-full">
-            <input type="text" placeholder="Search..." class="p-2" />
-            <button
-                type="submit"
-                class="bg-[#6699CC] text-white p-2 rounded-md hover:bg-[#5577AA] transition duration-300"
-            >
-                Search
+    <main class="flex-1 p-3">
+   <div class="flex items-center bg-white rounded-2xl shadow-md overflow-hidden max-w-md mx-auto border-2 border-[#d0dff0]">
+            <span class="material-symbols-outlined text-[#7a99bb] pl-4">search</span>
+            <input
+              type="text"
+              placeholder="Search businesses, services..."
+              class="flex-1 px-3 py-3 text-sm text-[#1a2a3a] focus:outline-none bg-transparent"
+            />
+            <button class="bg-[#6699CC] hover:bg-[#5577AA] text-white font-bold text-sm px-5 py-3 transition">
+              Search
             </button>
-            </form>
-            </div>
-             <div class="max-w-md mx-auto p-4 min-h-screem">
-               <div class="flex items-center justify-center justify-between p-4 bg-white rounded-xl shadow-sm border border-gray-100 mb-3">
-            <div>
-<h3 class="font-bold text-gray-800 text-lg"> Goodluck Primary school</h3>
-<p class="text-blue-400 text-sm">Part time teacher</p>
-            </div>
-            <div>
-            <button class="bg-blue-400 p-3 rounded-full text-white">
-<span class="material-symbols-outlined">
-call
-</span>
-            </button>
-            </div>
-          </div> <div class="flex items-center justify-center justify-between p-4 bg-white rounded-xl shadow-sm border border-gray-100 mb-3">
-            <div>
-<h3 class="font-bold text-gray-800 text-lg">Dawamu Stores</h3>
-<p class="text-blue-400 text-sm">Teller</p>
-            </div>
-            <div>
-            <button class="bg-blue-400 p-3 rounded-full text-white">
-<span class="material-symbols-outlined">
-call
-</span>
-            </button>
-            </div>
-          </div> <div class="flex items-center justify-center justify-between p-4 bg-white rounded-xl shadow-sm border border-gray-100 mb-3">
-            <div>
-<h3 class="font-bold text-gray-800 text-lg"> Local pd</h3>
-<p class="text-blue-400 text-sm">Cleaner</p>
-            </div>
-            <div>
-            <button class="bg-blue-400 p-3 rounded-full text-white">
-<span class="material-symbols-outlined">
-call
-</span>
-            </button>
-            </div>
-          </div> <div class="flex items-center justify-center justify-between p-4 bg-white rounded-xl shadow-sm border border-gray-100 mb-3">
-            <div>
-<h3 class="font-bold text-gray-800 text-lg">Augustine's</h3>
-<p class="text-blue-400 text-sm">Store keeper</p>
-            </div>
-            <div>
-            <button class="bg-blue-400 p-3 rounded-full text-white">
-<span class="material-symbols-outlined">
-call
-</span>
-            </button>
-            </div>
-          </div> <div class="flex items-center justify-center justify-between p-4 bg-white rounded-xl shadow-sm border border-gray-100 mb-3">
-            <div>
-<h3 class="font-bold text-gray-800 text-lg">Lulu's</h3>
-<p class="text-blue-400 text-sm">Delivery assistant</p>
-            </div>
-            <div>
-            <button class="bg-blue-400 p-3 rounded-full text-white">
-<span class="material-symbols-outlined">
-call
-</span>
-            </button>
-            </div>
-          </div> <div class="flex items-center justify-center justify-between p-4 bg-white rounded-xl shadow-sm border border-gray-100 mb-3">
-            <div>
-<h3 class="font-bold text-gray-800 text-lg">Mama James</h3>
-<p class="text-blue-400 text-sm">House manager</p>
-            </div>
-            <div>
-            <button class="bg-blue-400 p-3 rounded-full text-white">
-<span class="material-symbols-outlined">
-call
-</span>
-            </button>
-            </div>
           </div>
-             </div>
+             <div  id="favorites" class="max-w-md mx-auto p-4 min-h-screem"> </div>
+            
     </main>
      <footer class="mt-auto w-full">
       <div class="justify-center text-center font-medium">

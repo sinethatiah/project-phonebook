@@ -18,52 +18,70 @@
           "opsz" 24;
       }
     </style>
-    <script defer src="emergencies.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="emergencies.js"></script>
+    <script defer src="nav.js"></script>
   </head>
   <body class="bg-[#CAE5FF] min-h-screen flex flex-col">
     <header>
-     <nav class="flex justify-around items-center bg-[#6699CC] px-8 py-3 mx-4 mt-4 rounded-2xl shadow-lg sticky top-4 z-50">
- 
-        
+      <nav
+        class="flex justify-around items-center bg-[#6699CC] px-8 py-3 mx-4 mt-4 rounded-2xl shadow-lg sticky top-4 z-50"
+      >
         <a href="index.html" class="flex items-center gap-2">
-          <img src="images/phone-logo.avif" alt="logo" class="w-10 h-10 rounded-xl object-cover" />
+          <img
+            src="images/phone-logo.avif"
+            alt="logo"
+            class="w-10 h-10 rounded-xl object-cover"
+          />
         </a>
- 
-        
+
         <div>
-          <a href="main.html" class="text-white font-bold text-sm tracking-wide hover:text-white/70 transition">
+          <a
+            href="main.html"
+            class="text-white font-bold text-sm tracking-wide hover:text-white/70 transition"
+          >
             Home
           </a>
-          </div>
-          <div>
-          <a href="favorites.html" class="text-white font-bold text-sm tracking-wide hover:text-white/70 transition">
+        </div>
+        <div>
+          <a
+            href="favorites.html"
+            class="text-white font-bold text-sm tracking-wide hover:text-white/70 transition"
+          >
             Favorites
           </a>
         </div>
- 
-        
-        <a href="login.html">
-          <button class="flex items-center gap-2 bg-white text-[#5577AA] px-5 py-2.5 rounded-full font-extrabold text-sm hover:bg-[#dceeff] hover:shadow-md transition-all">
-            <span class="material-symbols-outlined text-lg">storefront</span>
-            Business Login
-          </button>
-        </a>
- 
+
+        <div id="auth-btn">
+          <a href="login.html">
+            <button
+              class="flex items-center gap-2 bg-white text-[#5577AA] px-5 py-2.5 rounded-full font-extrabold text-sm hover:bg-[#dceeff] transition-all"
+            >
+              <span class="material-symbols-outlined text-lg">storefront</span>
+              Business Login
+            </button>
+          </a>
+        </div>
       </nav>
     </header>
-    <main class="flex-1 p-5 mt-3">
-      <div class="flex items-center bg-white rounded-2xl shadow-md overflow-hidden max-w-md mx-auto border-2 border-[#d0dff0]">
-            <span class="material-symbols-outlined text-[#7a99bb] pl-4">search</span>
-            <input
-              type="text"
-              placeholder="Search emergency contacts"
-              class="flex-1 px-3 py-3 text-sm text-[#1a2a3a] focus:outline-none bg-transparent"
-            />
-            <button class="bg-[#6699CC] hover:bg-[#5577AA] text-white font-bold text-sm px-5 py-3 transition">
-              Search
-            </button>
-          </div>
+    <main class="flex-1 p-3">
+      <div
+        class="flex items-center bg-white rounded-2xl shadow-md overflow-hidden max-w-md mx-auto border-2 border-[#d0dff0]"
+      >
+        <span class="material-symbols-outlined text-[#7a99bb] pl-4"
+          >search</span
+        >
+        <input
+          type="text"
+          placeholder="Search emergency contacts"
+          class="flex-1 px-3 py-3 text-sm text-[#1a2a3a] focus:outline-none bg-transparent"
+        />
+        <button
+          class="bg-[#6699CC] hover:bg-[#5577AA] text-white font-bold text-sm px-5 py-3 transition"
+        >
+          Search
+        </button>
+      </div>
       <div id="dropdown" class="relative inline-block">
         <button
           id="dropdownBtn"
@@ -75,7 +93,9 @@
           class="hidden absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-10 max-h-60 overflow-y-scroll"
           id="country-selector"
         ></div>
+        
       </div>
+      <div id="emergency-result"></div>
     </main>
     <footer class="mt-auto w-full">
       <div class="justify-center text-center font-medium">
@@ -93,11 +113,13 @@
         </p>
       </div>
       <div class="text-center p-4 bg-[#6699CC] text-white mt-10 rounded-lg">
-        <div>   
+        <div>
           <div id="about"></div>
           <div id="servidesOffered"></div>
           <div id="sendMsg">
-            <div> <a href=""><i class="fa-brands fa-instagram"></i></a></div>
+            <div>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
             <div><a href=""></a></div>
             <div><a href=""></a></div>
           </div>
@@ -105,6 +127,5 @@
         <div>&copy; @2026 Phonebook. All rights reserved.</div>
       </div>
     </footer>
-    
   </body>
 </html>

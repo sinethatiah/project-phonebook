@@ -18,6 +18,7 @@
           "opsz" 24;
       }
     </style>
+    <script defer src="nav.js"></script>
   </head>
   <body class="bg-[#CAE5FF] min-h-screen flex flex-col">
    <header>
@@ -41,12 +42,14 @@
         </div>
  
         
-        <a href="login.html">
-          <button class="flex items-center gap-2 bg-white text-[#5577AA] px-5 py-2.5 rounded-full font-extrabold text-sm hover:bg-[#dceeff] hover:shadow-md transition-all">
-            <span class="material-symbols-outlined text-lg">storefront</span>
-            Business Login
-          </button>
-        </a>
+       <div id="auth-btn">
+  <a href="login.html">
+    <button class="flex items-center gap-2 bg-white text-[#5577AA] px-5 py-2.5 rounded-full font-extrabold text-sm hover:bg-[#dceeff] transition-all">
+      <span class="material-symbols-outlined text-lg">storefront</span>
+      Business Login
+    </button>
+  </a>
+</div>
  
       </nav>
     </header>
