@@ -5,7 +5,7 @@ function createCard(business) {
   card.innerHTML = `
     <div class="flex justify-between items-start">
       <div>
-        <h2 class="text-lg font-extrabold text-[#1a2a3a]">${business.name}</h2>
+        <h2 class="text-lg font-extrabold text-[#1a2a3a]">${business.businessName}</h2>
         <p class="text-xs text-[#7a99bb] font-semibold uppercase tracking-wide">${business.type === 'store' ? '🏪 Store' : '🔧 Service Provider'}</p>
       </div>
       <button onclick="removeFavourite(${business.id}, this)" class="text-red-400 hover:text-red-600 transition">
@@ -30,7 +30,7 @@ function createCard(business) {
 
 function removeFavourite(id, btn) {
   let favourites = JSON.parse(localStorage.getItem('favourites')) || [];
-  favourites = favourites.filter(f => f.id !== id);
+  favourites = favourites.filter(f => String(f.id) !== String(id));
   localStorage.setItem('favourites', JSON.stringify(favourites));
 
   // Remove card from DOM

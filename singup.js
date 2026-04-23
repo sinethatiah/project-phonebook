@@ -1,13 +1,14 @@
 // Add new object upon submission
 class Business {
-  constructor(name, email, number, type, password , businessName) {
-    this.name = name;
-    this.email = email;
-    this.number = number;
-    this.type = type;
-    this.password = password;
-    this.businessName = businessName;
-  }
+  constructor(name, email, number, type, password, businessName) {
+  this.id = String(Date.now());
+  this.name = name;
+  this.email = email;
+  this.number = number;
+  this.type = type;
+  this.password = password;
+  this.businessName = businessName;
+}
 
   save() {
     const businesses = JSON.parse(localStorage.getItem("businesses")) || [];
@@ -27,5 +28,6 @@ document.querySelector('form').addEventListener('submit', function (e) {
     document.getElementById(`bizName`).value
   );
   biz.save();
+   localStorage.setItem('loggedInBusiness', JSON.stringify(biz));
   window.location.href = 'account.html';
 });

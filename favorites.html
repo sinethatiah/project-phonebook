@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favorites</title>
-     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-    />
-     <style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <style>
       .material-symbols-outlined {
         font-variation-settings:
           "FILL" 0,
@@ -19,62 +16,57 @@
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="nav.js"></script>
-<script defer src="favorites.js"></script>
+    <script defer src="favorites.js"></script>
 </head>
 <body class="bg-[#CAE5FF] min-h-screen flex flex-col">
+
     <nav class="flex justify-around items-center bg-[#6699CC] px-8 py-3 mx-4 mt-4 rounded-2xl shadow-lg sticky top-4 z-50">
- 
-        
         <a href="index.html" class="flex items-center gap-2">
           <img src="images/phone-logo.avif" alt="logo" class="w-10 h-10 rounded-xl object-cover" />
         </a>
- 
-        
         <div>
           <a href="main.html" class="text-white font-bold text-sm tracking-wide hover:text-white/70 transition">
             Home
           </a>
-          </div>
-          <div>
+        </div>
+        <div>
           <a href="favorites.html" class="text-white font-bold text-sm tracking-wide hover:text-white/70 transition">
             Favorites
           </a>
         </div>
- 
-        
-       <div id="auth-btn">
-  <a href="login.html">
-    <button class="flex items-center gap-2 bg-white text-[#5577AA] px-5 py-2.5 rounded-full font-extrabold text-sm hover:bg-[#dceeff] transition-all">
-      <span class="material-symbols-outlined text-lg">storefront</span>
-      Business Login
-    </button>
-  </a>
-</div>
- 
-      </nav>
-    </header>
+        <div id="auth-btn">
+          <a href="login.html">
+            <button class="flex items-center gap-2 bg-white text-[#5577AA] px-5 py-2.5 rounded-full font-extrabold text-sm hover:bg-[#dceeff] transition-all">
+              <span class="material-symbols-outlined text-lg">storefront</span>
+              Business Login
+            </button>
+          </a>
+        </div>
+    </nav>
+
     <main class="flex-1 p-3">
-   <div class="flex items-center bg-white rounded-2xl shadow-md overflow-hidden max-w-md mx-auto border-2 border-[#d0dff0]">
+        <div class="flex items-center bg-white rounded-2xl shadow-md overflow-hidden max-w-md mx-auto border-2 border-[#d0dff0]">
             <span class="material-symbols-outlined text-[#7a99bb] pl-4">search</span>
             <input
               type="text"
-              placeholder="Search businesses, services..."
+              placeholder="Search favourites..."
               class="flex-1 px-3 py-3 text-sm text-[#1a2a3a] focus:outline-none bg-transparent"
             />
             <button class="bg-[#6699CC] hover:bg-[#5577AA] text-white font-bold text-sm px-5 py-3 transition">
               Search
             </button>
-          </div>
-             <div id="favourites-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4"></div>
         </div>
+        <div id="favourites-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4"></div>
     </main>
-     <footer class="mt-auto w-full">
+
+    <footer class="mt-auto w-full">
         <div class="justify-center text-center font-medium">
             <p>contacts us at <a href="mailto:info@phonebook.com" class="text-blue-500 hover:underline">info@phonebook.com</a> or call us at <a href="tel:+254768023626" class="text-blue-500 hover:underline">+254 768 023 626</a></p>
         </div>
-      <div class="text-center p-4 bg-[#6699CC] text-white mt-10 rounded-lg">
-        &copy; @2026 Phonebook. All rights reserved.
-      </div>
+        <div class="text-center p-4 bg-[#6699CC] text-white mt-10 rounded-lg">
+            &copy; @2026 Phonebook. All rights reserved.
+        </div>
     </footer>
+
 </body>
 </html>
