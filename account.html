@@ -28,20 +28,22 @@
         <div>
           <a href="favorites.html" class="text-white font-bold text-sm tracking-wide hover:text-white/70 transition">Favorites</a>
         </div>
-        <div id="auth-btn">
-          <a href="login.html">
-            <button class="flex items-center gap-2 bg-white text-[#5577AA] px-5 py-2.5 rounded-full font-extrabold text-sm hover:bg-[#dceeff] transition-all">
-              <span class="material-symbols-outlined text-lg">storefront</span>
-              Business Login
-            </button>
-          </a>
-        </div>
+       <div class="relative">
+     
+      <div id="dropdownMenu" class="w-44  bg-white rounded-3xl shadow-md border border-[#d0dff0] overflow-hidden z-50">
+        <hr class="border-[#d0dff0]"/>
+        <button onclick="logout()" class="w-full flex items-center gap-2 px-4 py-3 text-sm text-red-400 font-semibold hover:bg-red-50 transition">
+          <span class="material-symbols-outlined text-base">logout</span>
+          Logout
+        </button>
+      </div>
+    </div>
       </nav>
     </header>
 
     <main class="flex-1 p-4 max-w-2xl mx-auto w-full">
 
-      <!-- not logged in state -->
+      
       <div id="not-logged-in" class="hidden text-center mt-20">
         <span class="material-symbols-outlined text-6xl text-[#7a99bb]">lock</span>
         <p class="text-[#4a6a8a] font-semibold mt-4 mb-6">You need to be logged in to view this page.</p>
@@ -50,10 +52,10 @@
         </a>
       </div>
 
-      <!-- logged in state -->
+      
       <div id="account-content" class="hidden flex flex-col gap-5 mt-6">
 
-        <!-- header card -->
+        
         <div class="bg-white rounded-2xl shadow-md p-6 border border-[#d0dff0] flex items-center gap-5">
           <div class="bg-[#6699CC] rounded-full w-16 h-16 flex items-center justify-center shrink-0">
             <span class="material-symbols-outlined text-white text-4xl">account_circle</span>
@@ -64,7 +66,7 @@
           </div>
         </div>
 
-        <!-- details card -->
+        
         <div class="bg-white rounded-2xl shadow-md p-6 border border-[#d0dff0] flex flex-col gap-4">
           <h2 class="text-base font-extrabold text-[#1a2a3a]">Account Details</h2>
 
@@ -93,7 +95,7 @@
           </div>
         </div>
 
-        <!-- listing status card -->
+        
         <div class="bg-white rounded-2xl shadow-md p-6 border border-[#d0dff0] flex flex-col gap-3">
           <h2 class="text-base font-extrabold text-[#1a2a3a]">Your Listing</h2>
           <p class="text-sm text-[#4a6a8a]">Your business is currently listed in the directory under:</p>
@@ -103,7 +105,7 @@
           </a>
         </div>
 
-        <!-- logout button -->
+        
         <button onclick="logout()" class="flex items-center justify-center gap-2 bg-white border border-red-200 text-red-400 hover:bg-red-50 font-bold text-sm px-6 py-3 rounded-xl transition-all">
           <span class="material-symbols-outlined text-base">logout</span>
           Logout

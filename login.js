@@ -5,16 +5,23 @@ document.querySelector('form').addEventListener('submit', function(e) {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
+  const emailCon = document.getElementById(`emailConfirm`)
+  const passwordCon = document.getElementById(`passwordConfirm`)
+
   const businesses = JSON.parse(localStorage.getItem('businesses')) || [];
   const business = businesses.find(b => b.email === email);
 
   if (!business) {
-    alert('No account found with that email.');
+  emailCon.textContent = 'No account found with that email.';
+  emailCon.style.fontSize = "12px";
+  emailCon.style.color = `red`;
     return;
   }
 
   if (password !== business.password) {
-    alert('Incorrect password.');
+   passwordCon.textContent = 'Incorrect password.';
+ passwordCon.style.fontSize = "12px";
+  passwordCon.style.color = `red`;
     return;
   }
 
