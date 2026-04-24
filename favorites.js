@@ -1,3 +1,4 @@
+// display objects that have been added to favorites.
 function createCard(business) {
   const card = document.createElement('div');
   card.className = 'bg-white rounded-2xl shadow-md p-4 sm:p-5 flex flex-col gap-3 border border-[#d0dff0] w-full';

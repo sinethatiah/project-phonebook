@@ -1,8 +1,9 @@
+// displaying stores that have been added to the site and are stored on local storage
 function getBusinessesByType(type) {
   const all = JSON.parse(localStorage.getItem("businesses")) || [];
   return all.filter((b) => b.type === type);
 }
-
+// function ofr creating new cards for each business that is added
 function createCard(business) {
   const favourites = JSON.parse(localStorage.getItem('favourites')) || [];
   const isFav = favourites.some(f => String(f.id) === String(business.id));
@@ -36,7 +37,7 @@ function createCard(business) {
 
   return card;
 }
-
+// function for displaying the stores in the empty div
 function displayStores() {
   const container = document.getElementById("stores-container");
   const stores = getBusinessesByType("store");
@@ -50,7 +51,7 @@ function displayStores() {
 }
 
 displayStores();
-
+// function for adding stores to the favorites
 function toggleFavourite(id, btn) {
   const all = JSON.parse(localStorage.getItem('businesses')) || [];
   const business = all.find(b => String(b.id) === String(id));

@@ -1,8 +1,9 @@
+//displaying all the services that have been added to the website and are stored on local storage
 function getBusinessesByType(type) {
   const all = JSON.parse(localStorage.getItem("businesses")) || [];
   return all.filter((b) => b.type === type);
 }
-
+// function for creating new card for each business that is added
 function createCard(business) {
   const favourites = JSON.parse(localStorage.getItem('favourites')) || [];
   const isFav = favourites.some(f => String(f.id) === String(business.id));
@@ -36,7 +37,7 @@ function createCard(business) {
 
   return card;
 }
-
+// function for displaying the new cards in the div
 function displayServices() {
   const container = document.getElementById("services-container");
   const services = getBusinessesByType("service");
@@ -50,7 +51,7 @@ function displayServices() {
 }
 
 displayServices();
-
+// function for adding businesses to favorites
 function toggleFavourite(id, btn) {
   const all = JSON.parse(localStorage.getItem('businesses')) || [];
   const business = all.find(b => String(b.id) === String(id));
