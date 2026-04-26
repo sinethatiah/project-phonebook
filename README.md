@@ -31,6 +31,7 @@ This section lists stores which saves time when people are looking for certain i
 ## Technology used
 * html
 * css
+* Javascript
 
 ## Pages present
 1. landing page
@@ -41,6 +42,7 @@ This section lists stores which saves time when people are looking for certain i
 1. emergency contacts
 1. Job listing
 1. Store listing
+1. Account page
 
 
 

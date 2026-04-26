@@ -1,3 +1,4 @@
+// function to add job listings via the account page
 function toggleJobForm() {
   document.getElementById('job-form').classList.toggle('hidden');
 }

@@ -1,3 +1,4 @@
+// function to display jobs added which have been stored in local storage
 function createJobCard(job) {
   const card = document.createElement('div');
   card.className = 'bg-white rounded-2xl shadow-md p-5 flex flex-col gap-3 border border-[#d0dff0] w-full';
