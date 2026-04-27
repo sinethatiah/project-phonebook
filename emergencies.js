@@ -38,6 +38,8 @@ $(function () {
 
   loadCountries(name);
 });
+
+// function to fetch the emergency numbers from different countries
 function fetchEmergencyNumbers(code, name) {
   $.ajax({
     url: `https://corsproxy.io/?https://emergencynumberapi.com/api/country/${code}`,
