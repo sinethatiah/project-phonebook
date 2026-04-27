@@ -4,7 +4,7 @@ function createJobCard(job) {
   card.className = 'bg-white rounded-2xl shadow-md p-5 flex flex-col gap-3 border border-[#d0dff0] w-full';
 
   card.innerHTML = `
-    <div class="flex justify-between items-start">
+    <div class="flex flex-col justify-between items-start">
       <div>
         <h2 class="text-lg font-extrabold text-[#1a2a3a]">${job.title}</h2>
         <p class="text-xs text-[#7a99bb] font-semibold uppercase tracking-wide">${job.businessName}</p>
